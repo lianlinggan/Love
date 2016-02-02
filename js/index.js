@@ -24,7 +24,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('我们|牵手|一百天|啦！|Love U|#fly');
+      S.UI.simulate('我们|牵手|100天|啦！|Love U|#fly');
     }
 
     S.Drawing.loop(function () {
