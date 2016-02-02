@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>摇一摇</title>
+<link rel="stylesheet" href="./css/shake.css">
+<link rel="stylesheet" href="./css/myDialog.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/howler.min.js"></script> 
+<script type="text/javascript" src="./js/fastclick.js"></script> 
+<script type="text/javascript" src="./js/shake.js"></script>
+<script type="text/javascript" src="./js/myDialog.js"></script>
+</head>
+<body>
+
+<table id="container" style="width:100%">
+<tbody>
+	<tr>
+		<td class="container" colspan="2">
+			<div id="shake">
+				<img src="./images/inner.png" class="inner">
+				<img src="./images/shake.png" class="shake_up" id="shakeup">
+				<img src="./images/shake.png" class="shake_down" id="shakedown">
+			</div>
+			<div id="loading" class="loading"></div>
+		</td>
+	</tr>
+	<tr id="controlbar">
+		<td class="controlbar" onclick="javascript:shake();">
+			<img src="./images/sdy.png" width="40" height="53"><br>手动摇
+		</td>
+	</tr>
+	<tr id="cantshake" style="display:none"><td class="controlbar" colspan="2">对不起，您的手机无法支持摇一摇！</td></tr>
+</tbody>
+</table>
+
+<div id="together" style="width:100%;">
+	<canvas id="togetherCanvas" class="canvas"></canvas>
+	
+	<div id="gallery" >
+		<input id="S_Num" type="hidden" value="8" />
+		<div id="starsIF" class="imageflow">
+			<img src="images/we/1.jpg"/>
+			<img src="images/we/2.jpg"/>
+			<img src="images/we/3.jpg"/>
+			<img src="images/we/4.png"/>
+			<img src="images/we/5.jpg"/>
+			<img src="images/we/6.jpg"/>
+			<img src="images/we/7.jpg"/>
+			<img src="images/we/8.jpg"/>
+			<img src="images/we/9.jpg"/>
+			<img src="images/we/10.jpg"/>
+			<img src="images/we/11.jpg"/>
+		</div>
+		<p class="finalText">和你在一起最开心了</p>
+		<p class="finalText">To 苯宝宝</p>
+		<p class="finalText">你好重</p>
+		<p class="finalText">2016.01.07</p>
+	</div>
+	
+	<div class="help">?</div> 
+
+	<div class="ui">
+	  <input class="ui-input" type="text" />
+	  <span class="ui-return">↵</span>
+	</div>
+
+	<div class="overlay">
+	  <div class="tabs">
+		<div class="tabs-labels"><span class="tabs-label">Commands</span><span class="tabs-label">Info</span><span class="tabs-label">Share</span></div>
+
+		<div class="tabs-panels">
+		  <ul class="tabs-panel commands">
+			<li class="commands-item"><span class="commands-item-title">Text</span><span class="commands-item-info" data-demo="Hello :)">Type anything</span><span class="commands-item-action">Demo</span></li>
+			<li class="commands-item"><span class="commands-item-title">Countdown</span><span class="commands-item-info" data-demo="#countdown 10">#countdown<span class="commands-item-mode">number</span></span><span class="commands-item-action">Demo</span></li>
+			<li class="commands-item"><span class="commands-item-title">Time</span><span class="commands-item-info" data-demo="#time">#time</span><span class="commands-item-action">Demo</span></li>
+			<li class="commands-item"><span class="commands-item-title">Rectangle</span><span class="commands-item-info" data-demo="#rectangle 30x15">#rectangle<span class="commands-item-mode">width x height</span></span><span class="commands-item-action">Demo</span></li>
+			<li class="commands-item"><span class="commands-item-title">Circle</span><span class="commands-item-info" data-demo="#circle 25">#circle<span class="commands-item-mode">diameter</span></span><span class="commands-item-action">Demo</span></li>
+
+			<li class="commands-item commands-item--gap"><span class="commands-item-title">Animate</span><span class="commands-item-info" data-demo="The time is|#time|#countdown 3|#icon thumbs-up"><span class="commands-item-mode">command1</span>&nbsp;|<span class="commands-item-mode">command2</span></span><span class="commands-item-action">Demo</span></li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+</div>
+
+<script src="js/index.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>
